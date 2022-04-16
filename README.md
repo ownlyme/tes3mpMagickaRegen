@@ -9,4 +9,4 @@ and add this to your server\scripts\customScripts.lua :
   
 you can edit the file to adjust the magnitude or formula to your liking
 
-info: the "stunted magicka" debuff from atronach birth sign will disable the regeneration for your character
+info: the "stunted magicka" debuff from the atronach birthsign will disable the regeneration for your character
