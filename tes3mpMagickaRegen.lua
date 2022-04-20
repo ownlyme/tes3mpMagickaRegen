@@ -1,12 +1,12 @@
 -- Based on https://www.nexusmods.com/morrowind/mods/49040?tab=description
 
-slow = 141421
-medium = 70710
-fast = 17677
+local slow = 141421
+local medium = 70710
+local fast = 17677
 
-REGEN_SPEED = medium
+local REGEN_SPEED = medium
 
-formula = "((GetSquareRoot, int) * (wp * wp / "..REGEN_SPEED.." ))"
+local formula = "((GetSquareRoot, int) * (wp * wp / "..REGEN_SPEED.." ))"
 
 local function OnServerPostInit(eventStatus)
 RecordStores["script"].data.permanentRecords["rem_magickaregen_startup"] = { scriptText = "begin rem_magickaregen_startup\n\nif ( chargenState != -1 )\n    return\nendif\n\nif ( player->GetEffect sEffectStuntedMagicka == 1 )\n    StopScript rem_magickaregen_startup\n    return\nendif\n\nStartScript rem_magickareg\nStopScript rem_magickaregen_startup\n\nend\n"}
